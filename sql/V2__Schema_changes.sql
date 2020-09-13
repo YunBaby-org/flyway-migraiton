@@ -23,13 +23,13 @@ CREATE Table boundary
 	id CHAR(36) PRIMARY KEY NOT NULL UNIQUE,
 	tracker_id CHAR(36) NOT NULL,
 	FOREIGN KEY (tracker_id) references trackers(id),
-	time_start time,
-	time_end time,
-	weekday_start smallint,
-	weekday_end smallint,
+	time_start time NOT NULL,
+	time_end time NOT NULL,
+	weekday_start smallint NOT NULL,
+	weekday_end smallint NOT NULL,
 	lat float(24) NOT NULL,
 	lng float(24) NOT NULL,
-	radius smallint
+	radius smallint NOT NULL
 );
 CREATE Table tracker_requests
 (
