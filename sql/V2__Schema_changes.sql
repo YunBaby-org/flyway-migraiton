@@ -7,7 +7,7 @@ CREATE Table users(
 	username varchar(15) NOT NULL,
 	email varchar(50) NOT NULL UNIQUE,
 	phone varchar(10) NOT NULL,
-	password varchar(36) NOT NULL
+	password varchar(80) NOT NULL
 );
 
 CREATE Table trackers(
