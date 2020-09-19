@@ -22,7 +22,7 @@ CREATE Table boundary
 (
     id CHAR(36) PRIMARY KEY NOT NULL UNIQUE,
     tracker_id CHAR(36) NOT NULL,
-    FOREIGN KEY (tracker_id) references trackers(id),
+    FOREIGN KEY (tracker_id) references trackers(id) ON DELETE CASCADE,
     time_start timestamptz NOT NULL,
     time_end timestamptz NOT NULL,
     lat float(24) NOT NULL,
