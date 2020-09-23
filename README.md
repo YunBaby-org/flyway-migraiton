@@ -39,3 +39,9 @@ docker-compose run flyway-container migrate
 - write the script
 - follow the script naming convention: https://flywaydb.org/documentation/migrations#sql-based-migrations
 - add the script to the `sql` directory.
+
+# Placeholders
+
+The sql script contains following placeholders. They will be replace by the environment variable.
+
+- `PGBOUNCER_PASSWORD`: The password of pgbouncer account
